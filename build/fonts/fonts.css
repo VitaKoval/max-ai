@@ -1,54 +1,32 @@
+/* inter-300 */
 @font-face {
-    font-family: 'Manrope';
-    src: url('./Manrope-Light.ttf');
-    src: url('./Manrope-Light.woff2') format('woff2'),
-        url('./Manrope-Light.woff') format('woff'),
-        url('./Manrope-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/inter-v18-latin-300.woff2') format('woff2');
 }
-
+/* inter-regular */
 @font-face {
-    font-family: 'Manrope';
-    src: url('./Manrope-Regular.ttf');
-    src: url('./Manrope-Regular.woff2') format('woff2'),
-        url('./Manrope-Regular.woff') format('woff'),
-        url('./Manrope-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* inter-500 - latin */
 @font-face {
-    font-family: 'Manrope';
-    src: url('./Manrope-Medium.ttf');
-    src: url('./Manrope-Medium.woff2') format('woff2'),
-        url('./Manrope-Medium.woff') format('woff'),
-        url('./Manrope-Regular.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/inter-v18-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
+/* inter-700 - latin */
 @font-face {
-    font-family: 'Manrope';
-    src: url('./Manrope-SemiBold.ttf');
-    src: url('./Manrope-SemiBold.woff2') format('woff2'),
-        url('./Manrope-SemiBold.woff') format('woff'),
-        url('./Manrope-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Manrope';
-    src: url('./Manrope-Bold.ttf');
-    src: url('./Manrope-Bold.woff2') format('woff2'),
-        url('./Manrope-Bold.woff') format('woff'),
-        url('./Manrope-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/inter-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }

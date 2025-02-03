@@ -20,10 +20,6 @@ footer {
     }
 }
 
-.footer__description {
-    max-width: 90%;
-}
-
 .footer__nav {
     .nav__title {
         margin-bottom: 20px;
@@ -34,7 +30,6 @@ footer {
     .nav__list {
         display: flex;
         flex-direction: column;
-        // gap: 1rem;
     }
     .nav__item {
         
@@ -54,24 +49,10 @@ footer {
     display: flex;
     gap: 2rem;
     align-items: center;
-    justify-content: space-between;
-    border-top: 2px solid;
-    border-color: var(--primary-200);
+    justify-content: flex-end;
+    border-top: 1px solid;
+    border-color: var(--purple-50);
     padding-top:1.25rem;
-}
-
-.footer__social {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    .social__link {
-        width: 2rem;
-        height: 2rem;
-        transition: var(--transition-duration);
-        &:hover {
-            transform: translateY(-2px);
-        }
-    }
 }
 
 @include respond-to(bigMobile) {

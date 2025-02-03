@@ -1,6 +1,7 @@
+//1200px
 @mixin respond-to($breakpoint) {
   @if $breakpoint == desktop {
-    @media only screen and (min-width: 1200px) { 
+    @media only screen and (min-width: 75rem) { 
       @content;
     }
   }
@@ -10,15 +11,15 @@
       @content;
     }
   }
-
+//812px
   @else if $breakpoint == bigMobile {
-    @media only screen and (max-width: 812px) {
+    @media only screen and (max-width: 50.75rem) {
       @content;
     }
   }
-
+//600px
   @else if $breakpoint == mobile {
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 37.5rem) {
       @content;
     }
   }
