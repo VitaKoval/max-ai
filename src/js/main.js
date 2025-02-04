@@ -10,7 +10,7 @@ const wrapper = document.querySelector('.header__inner');
 
 
 // Toggle burger menu
-burger.addEventListener("click", function () {
+if (burger) burger.addEventListener("click", function () {
     burger.classList.toggle("active");
     header.classList.toggle("open-menu");
 
@@ -37,6 +37,33 @@ function moveActions() {
 // Initial check and on resize
 moveActions(); // Run on load
 window.addEventListener("resize", moveActions); // Run on resize
+
+//Swiper
+document.addEventListener("DOMContentLoaded", () => {
+    const swiper = new Swiper(".js-company-slider", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: true,
+        loopFillGroupWithBlank: false,
+        loopAdditionalSlides: 15,
+        speed: 5200,
+        simulateTouch: false,
+        freeMode: true,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false
+        },
+        breakpoints: {
+            1800: {
+                spaceBetween: 80
+            },
+            900: {
+                spaceBetween: 50
+            }
+        }
+    });
+});
+
 
 //Submit forms
 const forms = document.querySelectorAll(".js-submit-form");

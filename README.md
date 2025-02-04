@@ -4,7 +4,9 @@
 This repository contains the code for the landing page of the **Max AI** SaaS platform, which helps users gather important insights from news, blogs, and newsletters without having to read everything themselves.
 
 ## Technologies
-- HTML, CSS (SASS), JavaScript
+- HTML, CSS (SASS),
+- JavaScript,
+- Swiper.js (for sliders)
 
 ## Installation & Setup
 1. Clone the repository
