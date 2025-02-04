@@ -4,13 +4,13 @@ const burger = document.querySelector(".js-burger");
 const header = document.querySelector(".js-header");
 const body = document.querySelector("body");
 
-const actions = document.querySelector('.header__action');
+const actions = document.querySelector('.header__buttons');
 const navigation = document.querySelector('.header__nav');
-const wrapper = document.querySelector('.header__inner');
+const wrapper = document.querySelector('.header__actions');
 
 
 // Toggle burger menu
-if (burger) burger.addEventListener("click", function () {
+burger.addEventListener("click", function () {
     burger.classList.toggle("active");
     header.classList.toggle("open-menu");
 
@@ -23,13 +23,17 @@ if (burger) burger.addEventListener("click", function () {
 
 // Move actions based on screen width
 function moveActions() {
-    if (window.innerWidth < 1072) {
+    if (window.innerWidth < 600) {
         if (navigation && !navigation.contains(actions)) {
             navigation.append(actions);
         }
     } else {
         if (wrapper && !wrapper.contains(actions)) {
             wrapper.append(actions);
+        }
+        // If window width is >= 600, move 'actions' back to 'wrapper'
+        if (navigation && navigation.contains(actions)) {
+            navigation.removeChild(actions);
         }
     }
 }
