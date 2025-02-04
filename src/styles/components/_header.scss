@@ -6,6 +6,7 @@
     z-index: 10;
     padding: 1.5rem 0;
     transition: var(--transition-duration);
+    min-height: 5.063rem;
 }
 
 .header__inner {
@@ -31,6 +32,7 @@
 .header__actions {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
