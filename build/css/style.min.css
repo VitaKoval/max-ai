@@ -729,6 +729,9 @@ section {
   justify-content: center;
   gap: 1.5rem;
 }
+.overview__wrap.overview__wrap--reverse {
+  flex-direction: row-reverse;
+}
 
 .overview__image {
   width: 50%;
@@ -782,6 +785,9 @@ section {
 
 @media only screen and (max-width: 50.75rem) {
   .overview__wrap {
+    flex-direction: column;
+  }
+  .overview__wrap.overview__wrap--reverse {
     flex-direction: column;
   }
   .overview__image {

@@ -7,6 +7,9 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
+    &.overview__wrap--reverse {
+        flex-direction: row-reverse;
+    }
 }
 
 .overview__image {
@@ -62,6 +65,9 @@
 @include respond-to(bigMobile) {
     .overview__wrap {
         flex-direction: column;
+         &.overview__wrap--reverse {
+            flex-direction: column;
+        }
     }
 
     .overview__image {
