@@ -791,4 +791,29 @@ section {
     width: 100%;
   }
 }
+.section__cta {
+  padding: 3.75rem 0;
+  background-color: var(--blue-900);
+}
+
+.cta__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--black-3);
+  font-size: 1.25rem;
+  text-align: center;
+}
+.cta__content:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 /*# sourceMappingURL=style.min.css.map */
