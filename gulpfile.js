@@ -182,7 +182,7 @@ var deploy = require('gulp-gh-pages');
 gulp.task('deploy', function () {
   return gulp.src("./build/**/*")
     .pipe(deploy({ 
-      remoteUrl: "https://github.com/VitaKoval/medical-website.git",
+      remoteUrl: "https://github.com/VitaKoval/max-ai.git",
       branch: "gh-pages",
       push: true
     }))
