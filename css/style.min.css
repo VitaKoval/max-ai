@@ -778,48 +778,64 @@ section {
 @media only screen and (max-width: 37.5rem) {
   .features__list.list--small,
   .features__list.list--big {
+    position: relative;
+    height: 650px;
+    overflow-y: auto;
     grid-template-columns: 1fr;
     grid-auto-rows: 1fr;
+    gap: 550px;
   }
   .features__list.list--small .features__item,
   .features__list.list--big .features__item {
+    position: sticky;
     padding: 1.2rem;
     gap: 1rem;
+    background: var(--black-10);
+    box-shadow: 0 -5px 10px black, 0 5px 10px black;
   }
   .features__list.list--small .features__item:nth-child(1),
   .features__list.list--big .features__item:nth-child(1) {
+    top: 0;
     grid-area: 1/1/2/2;
   }
   .features__list.list--small .features__item:nth-child(2),
   .features__list.list--big .features__item:nth-child(2) {
+    top: 1rem;
     grid-area: 2/1/3/2;
   }
   .features__list.list--small .features__item:nth-child(3),
   .features__list.list--big .features__item:nth-child(3) {
+    top: 2rem;
     grid-area: 3/1/4/2;
   }
   .features__list.list--small .features__item:nth-child(4),
   .features__list.list--big .features__item:nth-child(4) {
+    top: 3rem;
     grid-area: 4/1/5/2;
   }
   .features__list.list--small .features__item:nth-child(5),
   .features__list.list--big .features__item:nth-child(5) {
+    top: 4rem;
     grid-area: 5/1/6/2;
   }
   .features__list.list--small .features__item:nth-child(6),
   .features__list.list--big .features__item:nth-child(6) {
+    top: 5rem;
     grid-area: 6/1/7/2;
   }
   .features__list.list--small .features__item:nth-child(7),
   .features__list.list--big .features__item:nth-child(7) {
+    top: 6rem;
     grid-area: 7/1/8/2;
   }
   .features__list.list--small .features__item:nth-child(8),
   .features__list.list--big .features__item:nth-child(8) {
+    top: 7rem;
     grid-area: 8/1/9/2;
   }
   .features__list.list--small .features__item:nth-child(9),
   .features__list.list--big .features__item:nth-child(9) {
+    top: 8rem;
     grid-area: 9/1/10/2;
   }
   .features__list.list--small .features__item:nth-child(3), .features__list.list--small .features__item:nth-child(4), .features__list.list--small .features__item:nth-child(7),
@@ -834,6 +850,9 @@ section {
   .features__list.list--big .features__item:nth-child(7) .features__description {
     text-align: center;
     align-items: center;
+  }
+  .features__img {
+    height: 180px;
   }
 }
 .section__overview {
@@ -1019,8 +1038,11 @@ section {
   }
 }
 @media only screen and (max-width: 37.5rem) {
+  .section__demo {
+    padding: 2rem 0 3rem;
+  }
   .slider__tabs {
-    width: 50%;
+    width: 100%;
     background-color: transparent;
     border-color: transparent;
   }
