@@ -1,6 +1,5 @@
 .section__demo {
     padding: 4.313rem 0;
-    //  overflow-x: hidden;
 }
 
 .demo__headline {
@@ -87,8 +86,11 @@
 }
 
 @include respond-to(mobile) {
+    .section__demo {
+    padding: 2rem 0 3rem;
+}
     .slider__tabs {
-        width: 50%;
+        width: 100%;
         background-color: transparent;
         border-color: transparent;
         .tabs__list {
