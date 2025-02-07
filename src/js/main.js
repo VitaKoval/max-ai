@@ -24,7 +24,7 @@ burger.addEventListener("click", function () {
 
 // Move actions based on screen width
 function moveActions() {
-    if (window.innerWidth < 600) {
+    if (window.innerWidth <= 600) {
         if (navigation && !navigation.contains(actions)) {
             navigation.append(actions);
         }
@@ -68,37 +68,27 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // function ReusableSlider() {
+
   const swiperInstance = new Swiper(".js-swiper-tabs-content", {
     speed: 400,
     spaceBetween: 100,
     autoHeight: false,
-    // pagination: {
-    //   el: ".slider-pagination",
-    //   type: "bullets",
-    //   clickable: true,
-    // },
   });
 
   const tabs = document.querySelectorAll(".js-swiper-tabs-container .js-swiper-tabs-item");
 
-  tabs.forEach(function (tab, index) {
+  tabs.forEach((tab, index) => {
     tab.addEventListener("click", function () {
-      tabs.forEach((t) => t.classList.remove("tabs--active"));
-      tab.classList.add("tabs--active");
-      swiperInstance.slideTo(index);
+        swiperInstance.slideTo(index); // Просто змінюємо слайд
     });
-  });
+});
 
   swiperInstance.on("slideChange", function () {
-    var activeIndex = swiperInstance.activeIndex;
+    const activeIndex = swiperInstance.activeIndex;
     tabs.forEach((tab, index) => {
       tab.classList.toggle("tabs--active", index === activeIndex);
     });
   });
-// }
-
-// ReusableSlider();
 
 });
 

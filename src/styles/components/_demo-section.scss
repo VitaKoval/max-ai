@@ -37,6 +37,7 @@
         background-color: var(--black-11);
         border-radius: 2.313rem;
         color: var(--blue-0);
+        white-space: nowrap;
         transition: var(--transition-duration);
         &:hover {
             cursor: pointer;
@@ -60,11 +61,10 @@
     .slider__slide {
         display: flex;
         align-items: center;
-        max-width: 1225px;
-        max-height: 635px;
+        
     }
     .slide__image {
-        // height: 635px;
+        max-width: 1225px;
         width: 100%;
     }
 }
@@ -73,5 +73,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
+}
+
+@include respond-to(bigMobile) {
+    .slider__tabs {
+        .tabs__item {
+            padding: 0.55rem 0.75rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+@include respond-to(mobile) {
+    .slider__tabs {
+        width: 50%;
+        background-color: transparent;
+        border-color: transparent;
+        .tabs__list {
+            justify-content: center;
+        }
+        .tabs__item {
+            transform: scale(0.5);
+            width: 0px;
+            transition: var(--transition-duration);
+            overflow: hidden;
+            color: transparent;
+            background-color: var(--black-1-opacity-10);
+            padding: 0.35rem 0.7rem;
+            &.tabs--active {
+               width: auto;
+               color: inherit;
+               transform: scale(1);
+            }
+        }
+    }
 }
