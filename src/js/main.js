@@ -1,4 +1,5 @@
 "use strict";
+
 //Header burger
 const burger = document.querySelector(".js-burger");
 const header = document.querySelector(".js-header");
@@ -44,28 +45,61 @@ window.addEventListener("resize", moveActions); // Run on resize
 
 //Swiper
 document.addEventListener("DOMContentLoaded", () => {
-    const swiper = new Swiper(".js-company-slider", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        loop: true,
-        loopFillGroupWithBlank: false,
-        loopAdditionalSlides: 15,
-        speed: 5200,
-        simulateTouch: false,
-        freeMode: true,
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false
-        },
-        breakpoints: {
-            1800: {
-                spaceBetween: 80
-            },
-            900: {
-                spaceBetween: 50
-            }
-        }
+  const swiper = new Swiper(".js-company-slider", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    loopAdditionalSlides: 15,
+    speed: 5200,
+    simulateTouch: false,
+    freeMode: true,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false
+    },
+    breakpoints: {
+      1800: {
+        spaceBetween: 80
+      },
+      900: {
+        spaceBetween: 50
+      }
+    }
+  });
+
+  // function ReusableSlider() {
+  const swiperInstance = new Swiper(".js-swiper-tabs-content", {
+    speed: 400,
+    spaceBetween: 100,
+    autoHeight: false,
+    // pagination: {
+    //   el: ".slider-pagination",
+    //   type: "bullets",
+    //   clickable: true,
+    // },
+  });
+
+  const tabs = document.querySelectorAll(".js-swiper-tabs-container .js-swiper-tabs-item");
+
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener("click", function () {
+      tabs.forEach((t) => t.classList.remove("tabs--active"));
+      tab.classList.add("tabs--active");
+      swiperInstance.slideTo(index);
     });
+  });
+
+  swiperInstance.on("slideChange", function () {
+    var activeIndex = swiperInstance.activeIndex;
+    tabs.forEach((tab, index) => {
+      tab.classList.toggle("tabs--active", index === activeIndex);
+    });
+  });
+// }
+
+// ReusableSlider();
+
 });
 
 
