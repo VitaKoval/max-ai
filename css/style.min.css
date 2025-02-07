@@ -939,4 +939,107 @@ section {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.section__demo {
+  padding: 4.313rem 0;
+}
+
+.demo__headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.demo__slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.25rem;
+  padding: 4.188rem 0;
+}
+
+.slider__tabs {
+  background-color: var(--black-11);
+  border: 1px solid;
+  border-color: var(--blue-700);
+  border-radius: 3.25rem;
+}
+.slider__tabs .tabs__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.slider__tabs .tabs__item {
+  padding: 1rem 1.25rem;
+  background-color: var(--black-11);
+  border-radius: 2.313rem;
+  color: var(--blue-0);
+  white-space: nowrap;
+  transition: var(--transition-duration);
+}
+.slider__tabs .tabs__item:hover {
+  cursor: pointer;
+  background-color: var(--purple-600);
+}
+.slider__tabs .tabs__item.tabs--active {
+  background-color: var(--purple-600);
+}
+
+.slider__slides {
+  position: relative;
+  width: 100%;
+}
+.slider__slides .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  transition-timing-function: linear;
+}
+.slider__slides .slider__slide {
+  display: flex;
+  align-items: center;
+}
+.slider__slides .slide__image {
+  max-width: 1225px;
+  width: 100%;
+}
+
+.demo__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 50.75rem) {
+  .slider__tabs .tabs__item {
+    padding: 0.55rem 0.75rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 37.5rem) {
+  .slider__tabs {
+    width: 50%;
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .slider__tabs .tabs__list {
+    justify-content: center;
+  }
+  .slider__tabs .tabs__item {
+    transform: scale(0.5);
+    width: 0px;
+    transition: var(--transition-duration);
+    overflow: hidden;
+    color: transparent;
+    background-color: var(--black-1-opacity-10);
+    padding: 0.35rem 0.7rem;
+  }
+  .slider__tabs .tabs__item.tabs--active {
+    width: auto;
+    color: inherit;
+    transform: scale(1);
+  }
+}
 /*# sourceMappingURL=style.min.css.map */
