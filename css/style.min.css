@@ -293,8 +293,11 @@ section {
   background-color: var(--black-1);
   z-index: 10;
   padding: 1.5rem 0;
-  transition: var(--transition-duration);
+  transition: top 0.4s ease-in-out;
   min-height: 5.063rem;
+}
+.header.header-up {
+  top: -6rem;
 }
 
 .header__inner {
@@ -393,13 +396,18 @@ section {
 }
 
 @media only screen and (max-width: 37.5rem) {
+  .header {
+    padding: 1rem 0;
+    min-height: 4rem;
+  }
   .header__burger {
     display: flex;
   }
   .header__nav {
     position: absolute;
     right: -100vw;
-    top: 3.5rem;
+    top: 3rem;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -502,8 +510,7 @@ section {
   }
 }
 .section__intro {
-  margin-top: 5.063rem;
-  padding: 3.688rem 0 1.938rem;
+  padding: 9rem 0 1.938rem;
 }
 
 .intro__container {
