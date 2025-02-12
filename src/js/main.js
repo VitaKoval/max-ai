@@ -1,6 +1,6 @@
 "use strict";
 
-//Header burger
+//Header elements
 const burger = document.querySelector(".js-burger");
 const header = document.querySelector(".js-header");
 const body = document.querySelector("body");
@@ -9,6 +9,23 @@ const actions = document.querySelector('.header__buttons');
 const navigation = document.querySelector('.header__nav');
 const wrapper = document.querySelector('.header__actions');
 
+
+// Hide header on scroll down, show on scroll up
+let lastScrollTop = 0;
+
+function handleHeaderScroll() {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollTop ) {
+    header.classList.add('header-up');
+  } else {
+    header.classList.remove('header-up');
+  }
+
+  lastScrollTop = currentScroll;
+}
+
+window.addEventListener('scroll', handleHeaderScroll);
 
 // Toggle burger menu
 burger.addEventListener("click", function () {
@@ -211,3 +228,5 @@ function animateRunningNumbers(containerClass, numberClass) {
 }
 
 animateRunningNumbers("js-running-value", "js-running-number");
+
+

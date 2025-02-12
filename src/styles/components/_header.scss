@@ -5,9 +5,15 @@
     background-color: var(--black-1);
     z-index: 10;
     padding: 1.5rem 0;
-    transition: var(--transition-duration);
+    transition: top 0.4s ease-in-out;
     min-height: 5.063rem;
+    &.header-up {
+        top: -6rem;
+    }
+
 }
+
+
 
 .header__inner {
     display: flex;
@@ -121,6 +127,7 @@
         position: absolute;
         right: -100vw;
         top: 3rem;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
